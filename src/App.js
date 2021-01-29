@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Header from "./component/Header";
+require("dotenv").config();
 
 const App = () => {
+  // const api_key = process.env.WEATHER_API_KEY;
   const [temperature, setTemperature] = useState("");
   const [city, setCity] = useState("東京都");
   const [weather, setWeather] = useState("");
   // const [weatherIcon, setWeatherIcon] = useState("");
 
-  const getWeatherData = (city) => {
-    axios({
+  const getWeatherData = async (city) => {
+    await axios({
       method: "GET",
       url: `http://api.openweathermap.org/data/2.5/weather?q=${city},japan&lang=ja&appid=fc37aef6e89c94d9365b1ec31d5c8ea4`,
     })
