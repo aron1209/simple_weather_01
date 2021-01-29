@@ -10,7 +10,6 @@
 
 # production
 /build
-/containers
 
 # misc
 .DS_Store

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Header from "./component/Header";
-// import InputCity from "./containers/InputCity";
-// import ShowCity from "./containers/ShowCity";
 
 const App = () => {
   const [temperature, setTemperature] = useState("");
